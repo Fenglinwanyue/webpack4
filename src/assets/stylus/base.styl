@@ -1,0 +1,35 @@
+html, body
+    line-height 1
+    font-family 'PingFang-SC-Light', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+    user-select none
+    -webkit-tap-highlight-color transparent
+    width 100%
+    height 100%
+    position relative
+    margin 0
+    padding 0
+@media (-wekit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5)
+    .linght-border, .top-border, .dashed-border
+        &::after
+            -webkit-transform scaleY(0.7)
+            transform scaleY(0.7)
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2)
+    .light-border, .top-border, .dashed-border
+        &::after
+            -webkit-transform scaleY(0.5)
+            transform scaleY(0.5)
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+    .light-border, .top-border, .dashed-border
+        &::after
+            -webkit-transform scaleY(0.3)
+            transform scaleY(0.3)
+#app
+    height 100%
+    width 100%
+    position absolute
+    left 0
+    top 0
+    background #fff
+    // overflow: auto
+    overflow hidden
+    -webkit-overflow-scrolling touch

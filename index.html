@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="stylesheet" href="" 禁止转化的css data-viewport-units-buggyfill="ignore"> -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+
+  <body>
+    <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+    <script>
+      window.onload = function() {
+        window.viewportUnitsBuggyfill.init({
+          hacks: window.viewportUnitsBuggyfillHacks
+        })
+      }
+    </script>
+    <div id="app">
+      <!--测试htmlwebpackplugin去除注释-->
+      <p>测试实体空格&nbsp;是否会删除</p>
+    </div>
+    <%= htmlWebpackPlugin.options.buildEnv %> <%if(htmlWebpackPlugin.options.buildEnv === 'test'){%>
+    <!-- <script src="https://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/2.5.1/vconsole.min.js"></script> -->
+    <%}else{%>
+    <div>now: production</div>
+    <%}%>
+  </body>
+</html>
